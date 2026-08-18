@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-// import NavBar from "@/components/NavBar";
+import NavBar from "@/components/NavBar";
 interface User {
     name: string,
     email: string
@@ -39,9 +39,9 @@ export default function HomePage() {
     return (
         <>
             <div>
-                {/* <div>
+                <div>
                     <NavBar />
-                </div> */}
+                </div>
                 <div className="min-h-screen flex items-center justify-center bg-gray-100">
                     <div className="bg-white p-8 rounded shadow-md text-center">
                         <h1 className="text-3xl font-bold mb-2 text-black">Welcome, {user.name}! 👋</h1>
