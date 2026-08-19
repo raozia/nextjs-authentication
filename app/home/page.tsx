@@ -49,7 +49,7 @@ export default function HomePage() {
                         <p className="text-gray-500 mb-6">{user.email}</p>
                         <button
                             onClick={handleLogout}
-                            className="bg-blue-500-500 text-white px-6 py-2 rounded hover:bg-blue-700"
+                            className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-700"
                         >
                             Logout
                         </button>

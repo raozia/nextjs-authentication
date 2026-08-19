@@ -10,9 +10,9 @@ const NavBar = () => {
                 </div>
                 <div>
                     <div className='flex gap-4'>
-                        <Link href={'/#'}>Notification</Link>
-                        <Link href={'/#'}>Cart</Link>
-                        <Link href={'/#'}>Logout</Link>
+                        <Link href={'/#'} className=' bg-amber-200 text-black p-2 rounded-sm'>Notification</Link>
+                        <Link href={'/#'} className='bg-amber-200 text-black p-2 rounded-sm'>Cart</Link>
+                        <Link href={'/#'} className='bg-amber-200 text-black p-2 rounded-sm'>Logout</Link>
                     </div>
                 </div>
             </div>
