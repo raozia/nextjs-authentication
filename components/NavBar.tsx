@@ -4,7 +4,7 @@ import Link from 'next/link'
 const NavBar = () => {
     return (
         <div>
-            <div className=''>
+            <div className='flex justify-between'>
                 <div>
                     <h1>LOGO</h1>
                 </div>
