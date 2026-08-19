@@ -10,6 +10,7 @@ export default function HomePage() {
     const router = useRouter();
     const [user, setUser] = useState<User>();
 
+    console.log("Adding authenticaton testing")
     const fetchUser = async () => {
         try {
             const stored = await localStorage.getItem("loggedInUser");
