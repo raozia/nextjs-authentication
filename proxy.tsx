@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export function middleware(request: any) {
+export default function proxy(request: any) {
     const isLoggedIn = request.cookies.get("loggedInUser");
     const isGoingToHome = request.nextUrl.pathname.startsWith("/home");
 
