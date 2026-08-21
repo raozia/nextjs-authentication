@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-// import NavBar from "@/components/NavBar";
 interface User {
     name: string,
     email: string
@@ -10,7 +9,7 @@ export default function HomePage() {
     const router = useRouter();
     const [user, setUser] = useState<User>();
 
-    console.log("Adding authenticaton testing")
+    // console.log("Adding authenticaton testing")
     const fetchUser = async () => {
         try {
             const stored = await localStorage.getItem("loggedInUser");
@@ -35,21 +34,18 @@ export default function HomePage() {
         router.push("/login");
     }
 
-    if (!user) return null; // Wait for data to load
+    if (!user) return null;
 
     return (
         <>
             <div>
-                {/* <div>
-                    <NavBar />
-                </div> */}
                 <div className="min-h-screen flex items-center justify-center bg-gray-100">
                     <div className="bg-white p-8 rounded shadow-md text-center">
                         <h1 className="text-3xl font-bold mb-2 text-black">Welcome, {user.name}!</h1>
                         <p className="text-gray-500 mb-6">{user.email}</p>
                         <button
                             onClick={handleLogout}
-                            className="bg-blue-500-500 text-white px-6 py-2 rounded hover:bg-blue-700"
+                            className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-700"
                         >
                             Logout
                         </button>
