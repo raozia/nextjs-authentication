@@ -1,6 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+// import { useDispatch, useSelector } from "react-redux";
+// import { decrement, increment } from "@/lib/features/counterSlice";
+
 interface User {
     name: string,
     email: string
@@ -8,7 +11,8 @@ interface User {
 export default function HomePage() {
     const router = useRouter();
     const [user, setUser] = useState<User>();
-
+    // const count = useSelector((state: any) => state.counter.value)
+    // const dispatch = useDispatch()
     // console.log("Adding authenticaton testing")
     const fetchUser = async () => {
         try {
@@ -51,6 +55,22 @@ export default function HomePage() {
                         </button>
                     </div>
                 </div>
+
+                {/* <div>
+                    <button
+                        aria-label="Increment value"
+                        onClick={() => dispatch(increment())}
+                    >
+                        Increment
+                    </button>
+                    <span>{count}</span>
+                    <button
+                        aria-label="Decrement value"
+                        onClick={() => dispatch(decrement())}
+                    >
+                        Decrement
+                    </button>
+                </div> */}
             </div>
         </>
     );
